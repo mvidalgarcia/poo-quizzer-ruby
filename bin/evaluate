@@ -1,0 +1,5 @@
+#! /usr/local/bin/ruby
+
+require 'quizzer/main'
+quizzer = Main.new(ARGV)
+quizzer.run

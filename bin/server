@@ -1,0 +1,22 @@
+#! /usr/local/bin/ruby
+require 'sinatra'
+require 'rubygems'
+require 'haml'
+
+require_relative '../lib/quizzer/main'
+require_relative '../lib/quizzer/server'
+
+set :views, Proc.new { File.join(root, "../views") }
+
+# Handle GET-request (Show the upload form)
+  get "/upload" do
+    haml :upload
+  end
+
+# Handle POST-request (Receive and save the uploaded file)
+  post '/upload' do
+    server = Server.new
+    file = server.post(params)
+    send_file(file, :disposition => 'attachment', :filename => File.basename(file))
+  end
+

@@ -1,5 +1,7 @@
 ##Ruby - Quizzer
 
+Todos los ficheros están en https://github.com/mvidalgarcia/poo-quizzer-ruby
+
 La clase Evaluator (`lib/quizzer/evaluator.rb`) que es la que realiza todas la operaciones, con métodos estaticos. De este modo se consigue el objetivo de modularizar el código y lo hace más legible y fácil de modificar y a su vez facilita el proceso de pruebas.
 
 Para leer los ficheros JSON que se obtienen mediante URL, como son los del fichero `manifest.json`, se emplea la gema `open-uri`.
